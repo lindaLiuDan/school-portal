@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.friend.dao.IFriendRingLikeDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.sys.modules.FriendRingLikeEntity" id="friendRingLikeMap">-->
+    <!--<resultMessage property="likeId" column="like_id"/>-->
+    <!--<resultMessage property="ringId" column="ring_id"/>-->
+    <!--<resultMessage property="userId" column="user_id"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--</resultMap>-->
+
+
+    <select id="getUserById" parameterType="java.lang.Integer" resultType="com.info.modules.friend.vo.UserRingLikeVo">
+
+      SELECT ui.user_id,ui.user_name,ui.img from friend_ring_like frl
+      LEFT JOIN user_info ui on frl.user_id=ui.user_id WHERE frl.ring_id=#{ringId} AND ui.del=1 LIMIT 0,10
+    </select>
+
+    <select id="getEntityByUId" parameterType="java.lang.Integer" resultType="com.info.modules.friend.entity.FriendRingLikeEntity">
+      select rl.like_id  from friend_ring_like rl where rl.user_id=#{userId} and rl.ring_id=#{ringId}
+    </select>
+
+</mapper>

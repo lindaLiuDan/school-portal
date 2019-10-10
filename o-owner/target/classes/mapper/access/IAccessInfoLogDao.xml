@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.access.dao.IAccessInfoLogDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.moduless.AccessInfoLogEntity" id="accessInfoLogMap">-->
+    <!--<resultMessage property="adId" column="ad_id"/>-->
+    <!--<resultMessage property="infoId" column="info_id"/>-->
+    <!--<resultMessage property="userId" column="user_id"/>-->
+    <!--<resultMessage property="isStatus" column="is_status"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--<resultMessage property="memo" column="memo"/>-->
+    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--<resultMessage property="editor" column="editor"/>-->
+    <!--</resultMap>-->
+
+
+</mapper>

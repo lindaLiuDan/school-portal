@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.info.modules.order.dao.IOrderInfoDao">
+
+    <!--订单入库操作-->
+    <insert id="save" parameterType="com.info.modules.order.entity.OrderInfoEntity" useGeneratedKeys="true"
+            keyColumn="order_id" keyProperty="orderId">
+        INSERT INTO order_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="providerId!=null">
+                provider_id,
+            </if>
+            <if test="flowId !=null">
+                flow_id,
+            </if>
+            <if test="addressId!=null">
+                address_id,
+            </if>
+            <if test="userId !=null">
+                user_id,
+            </if>
+            <if test="orderNo!=null">
+                order_no,
+            </if>
+            <if test="title!=null">
+                title,
+            </if>
+            <if test="email!= null">
+                email,
+            </if>
+            <if test="memo!=null">
+                memo,
+            </if>
+            <if test="orderSource!=null">
+                order_source,
+            </if>
+            <if test="payType!=null">
+                pay_type,
+            </if>
+            <if test="totalMoney!=null">
+                total_money,
+            </if>
+            <if test="payTime!=null">
+                pay_time,
+            </if>
+            <if test="orderTime!=null">
+                order_time,
+            </if>
+            <if test="serviceTime!=null">
+                service_time,
+            </if>
+            <if test="isInvoice!=null">
+                is_invoice,
+            </if>
+            <if test="invoiceTitle!=null">
+                invoice_title,
+            </if>
+            <if test="invoiceInfo!=null">
+                invoice_info,
+            </if>
+            <if test="useCoin!=null">
+                use_coin,
+            </if>
+            <if test="orderCoin!=null">
+                order_coin,
+            </if>
+
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="providerId!=null">
+                #{providerId},
+            </if>
+            <if test="flowId !=null">
+                #{flowId},
+            </if>
+            <if test="addressId!=null">
+                #{addressId},
+            </if>
+            <if test="userId !=null">
+                #{userId},
+            </if>
+            <if test="orderNo!=null">
+                #{orderNo},
+            </if>
+            <if test="title!=null">
+                #{title},
+            </if>
+            <if test="email!= null">
+                #{email},
+            </if>
+            <if test="memo!=null">
+                #{memo},
+            </if>
+            <if test="orderSource!=null">
+                #{orderSource},
+            </if>
+            <if test="payType!=null">
+                #{payType},
+            </if>
+            <if test="totalMoney!=null">
+                #{totalMoney},
+            </if>
+            <if test="payTime!=null">
+                #{payTime},
+            </if>
+            <if test="orderTime!=null">
+                #{orderTime},
+            </if>
+            <if test="serviceTime!=null">
+                #{serviceTime},
+            </if>
+            <if test="isInvoice!=null">
+                #{isInvoice},
+            </if>
+            <if test="invoiceTitle!=null">
+                #{invoiceTitle},
+            </if>
+            <if test="invoiceInfo!=null">
+                #{invoiceInfo},
+            </if>
+            <if test="useCoin!=null">
+                #{useCoin},
+            </if>
+            <if test="orderCoin!=null">
+                #{orderCoin},
+            </if>
+
+        </trim>
+    </insert>
+
+</mapper>

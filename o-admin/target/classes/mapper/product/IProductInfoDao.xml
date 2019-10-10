@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.product.dao.IProductInfoDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.moduless.ProductInfoEntity" id="productInfoMap">-->
+    <!--<resultMessage property="productId" column="product_id"/>-->
+    <!--<resultMessage property="unitId" column="unit_id"/>-->
+    <!--<resultMessage property="providerId" column="provider_id"/>-->
+    <!--<resultMessage property="cateId" column="cate_id"/>-->
+    <!--<resultMessage property="productNo" column="product_no"/>-->
+    <!--<resultMessage property="productName" column="product_name"/>-->
+    <!--<resultMessage property="stock" column="stock"/>-->
+    <!--<resultMessage property="cateIds" column="cate_ids"/>-->
+    <!--<resultMessage property="img" column="img"/>-->
+    <!--<resultMessage property="smallImg" column="small_img"/>-->
+    <!--<resultMessage property="salesPrice" column="sales_price"/>-->
+    <!--<resultMessage property="tradePrice" column="trade_price"/>-->
+    <!--<resultMessage property="marketPrice" column="market_price"/>-->
+    <!--<resultMessage property="clickNum" column="click_num"/>-->
+    <!--<resultMessage property="isIntegral" column="is_integral"/>-->
+    <!--<resultMessage property="integral" column="integral"/>-->
+    <!--<resultMessage property="scoreIntegral" column="score_integral"/>-->
+    <!--<resultMessage property="moneyIntegral" column="money_integral"/>-->
+    <!--<resultMessage property="weight" column="weight"/>-->
+    <!--<resultMessage property="busModel" column="bus_model"/>-->
+    <!--<resultMessage property="brief" column="brief"/>-->
+    <!--<resultMessage property="lists" column="lists"/>-->
+    <!--<resultMessage property="detail" column="detail"/>-->
+    <!--<resultMessage property="afterSale" column="after_sale"/>-->
+    <!--<resultMessage property="statues" column="statues"/>-->
+    <!--<resultMessage property="onlineTime" column="online_time"/>-->
+    <!--<resultMessage property="creator" column="creator"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--<resultMessage property="editor" column="editor"/>-->
+    <!--<resultMessage property="saledNum" column="saled_num"/>-->
+    <!--<resultMessage property="sort" column="sort"/>-->
+    <!--<resultMessage property="isDel" column="is_del"/>-->
+    <!--<resultMessage property="meta" column="meta"/>-->
+    <!--<resultMessage property="world" column="world"/>-->
+    <!--<resultMessage property="memo" column="memo"/>-->
+    <!--</resultMap>-->
+
+
+</mapper>

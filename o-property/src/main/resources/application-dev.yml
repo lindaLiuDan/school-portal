@@ -1,0 +1,95 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://122.114.157.44:3306/o_lift?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+      username: root
+      password: duoke8888
+      initial-size: 10
+      max-active: 100
+      min-idle: 10
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      #Oracle需要打开注释
+      #validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        #login-username: admin
+        #login-password: admin
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: false
+        wall:
+          config:
+            multi-statement-allow: true
+
+  #redis连接的时候
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password:        # 密码（默认为空）
+    timeout: 6000ms  # 连接超时时长（毫秒）
+    jedis:
+      pool:
+        max-active: 1000  # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1ms    # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 10      # 连接池中的最大空闲连接
+        min-idle: 5       # 连接池中的最小空闲连接
+
+logging:
+  level: debug
+  level.com.info: debug
+  path: D:/logs/
+  file: owner.log
+
+#Token过期时间 设置时间为99天为过期时间 换算成秒
+expireTime: 99 #*24*60*60
+
+# 文件(富文本图片上传)上传位置配置
+uploadPath: devimg
+
+# 解决参数传递过程中偶尔丢失参数情况
+fileTmp: E:/temp
+
+#发送短信的加密盐
+app_key: 960889426@8859-1!#$
+
+# 密码盐
+passwordSalt: f1ab3ada19474b31449127a254f4a0bda8a5fd3461a84e7acc02f041f1be6fcd
+
+#创蓝云短信
+sms.account: N2554310
+sms.passWord: 2vmMqiTcfr082b
+sms.url: https://smssh1.253.com/msg/send/json
+sms.rd: 0
+#sms.ex:
+sms.charset: utf-8
+sms.msg: 您的验证码是：
+
+#阿里短信
+templateCodeReg: SMS_161596846
+templateCodePwd: SMS_161596846
+templateCodeMobile: SMS_161596846
+templateCodeWithDrawPwd: SMS_161596846
+
+#m每个用户允许拥有收货地址数量
+addressNumber: 10
+
+# img图片开始压缩尺寸 100 KB
+imgSize: 1024000
+
+storage:
+  url: http://api.storagesdk.com/
+  bucket_name: devimg
+

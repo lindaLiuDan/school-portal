@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/o-admin/o-admin.iml" filepath="$PROJECT_DIR$/o-admin/o-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/o-entity/o-entity.iml" filepath="$PROJECT_DIR$/o-entity/o-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/o-gene/o-gene.iml" filepath="$PROJECT_DIR$/o-gene/o-gene.iml" />
+      <module fileurl="file://$PROJECT_DIR$/o-lift.iml" filepath="$PROJECT_DIR$/o-lift.iml" />
+      <module fileurl="file://$PROJECT_DIR$/o-owner/o-owner.iml" filepath="$PROJECT_DIR$/o-owner/o-owner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/o-property/o-property.iml" filepath="$PROJECT_DIR$/o-property/o-property.iml" />
+      <module fileurl="file://$PROJECT_DIR$/o-public/o-public.iml" filepath="$PROJECT_DIR$/o-public/o-public.iml" />
+      <module fileurl="file://$PROJECT_DIR$/o-tools/o-tools.iml" filepath="$PROJECT_DIR$/o-tools/o-tools.iml" />
+    </modules>
+  </component>
+</project>

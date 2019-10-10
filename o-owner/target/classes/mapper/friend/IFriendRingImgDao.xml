@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.friend.dao.IFriendRingImgDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.sys.modules.FriendRingImgEntity" id="friendRingImgMap">-->
+    <!--<resultMessage property="imgId" column="img_id"/>-->
+    <!--<resultMessage property="ringId" column="ring_id"/>-->
+    <!--<resultMessage property="img" column="img"/>-->
+    <!--<resultMessage property="smallImg" column="small_img"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--</resultMap>-->
+
+    <select id="getImgByInfRingId" parameterType="java.lang.Integer" resultType="com.info.modules.friend.entity.FriendRingImgEntity">
+        SELECT fri.img_id,fri.small_img, fri.img from friend_ring_img fri where fri.ring_id=#{reingId}
+    </select>
+
+</mapper>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>登入投融资后台管理系统</title>
+    <meta content="webkit" name="renderer">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+          name="viewport">
+    <link href="${request.contextPath}/statics/layui/css/layui.css" media="all" rel="stylesheet">
+    <link href="${request.contextPath}/statics/style/admin.css" media="all" rel="stylesheet">
+    <link href="${request.contextPath}/statics/style/login.css" media="all" rel="stylesheet">
+</head>
+<body style="background-image:url('${request.contextPath}/statics/layui/images/login-background.jpg');">
+
+<div class="layadmin-user-login layadmin-user-display-show" id="LAY-user-login" style="display: none;">
+
+    <div class="layadmin-user-login-main"
+         style="border:1px solid white;padding: 10px; background-color: rgba(255,255,255,0.2);border-radius: 5px;">
+        <div class="layadmin-user-login-box layadmin-user-login-header" style="color: white;">
+            <h2 style="color: white;">投融资后台管理系统</h2>
+            <!--<p>天频后台管理模板系统</p>-->
+        </div>
+        <div class="layadmin-user-login-box layadmin-user-login-body layui-form">
+            <div class="layui-form-item">
+                <label class="layadmin-user-login-icon layui-icon layui-icon-username"
+                       for="LAY-user-login-username"></label>
+                <input class="layui-input" id="LAY-user-login-username" lay-verify="required" name="username"
+                       placeholder="用户名"
+                       type="text">
+            </div>
+            <div class="layui-form-item">
+                <label class="layadmin-user-login-icon layui-icon layui-icon-password"
+                       for="LAY-user-login-password"></label>
+                <input class="layui-input" id="LAY-user-login-password" lay-verify="required" name="password"
+                       placeholder="密码" type="password">
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-row">
+                    <div class="layui-col-xs7">
+                        <label class="layadmin-user-login-icon layui-icon layui-icon-vercode"
+                               for="LAY-user-login-vercode"></label>
+                        <input class="layui-input" id="LAY-user-login-vercode" lay-verify="required" name="captcha"
+                               placeholder="图形验证码" type="text">
+                    </div>
+                    <div class="layui-col-xs5">
+                        <div style="margin-left: 10px;">
+                            <img class="layadmin-user-login-codeimg"
+                                 id="verifyImg"
+                                 onclick="javascript:this.src='${request.contextPath}/captcha.jpg?tm='+Math.random();"
+                                 src="${request.contextPath}/captcha.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn layui-btn-fluid" id="login" lay-filter="LAY-user-login-submit" lay-submit>登 入
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="layui-trans layadmin-user-login-footer" style="color: white;">
+        <p>© 2018<a href="http://www.layui.com/" style="color: white;" target="_blank">tianpininfo.com</a></p>
+    </div>
+</div>
+
+<script src="${request.contextPath}/statics/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '${request.contextPath}/statics/' //静态资源所在路径
+    }).extend({
+        index: 'lib/index' //主入口模块
+    }).use(['index', 'user'], function () {
+        var $ = layui.$
+            , setter = layui.setter
+            , admin = layui.admin
+            , form = layui.form
+            , router = layui.router()
+            , search = router.search;
+
+        form.render();
+
+        //提交
+        form.on('submit(LAY-user-login-submit)', function (obj) {
+            //请求登入接口
+            $.ajax({
+                url: "sys/login"
+                , type: 'POST'
+                , data: obj.field
+                , success: function (res) {
+                    console.log(res);
+                    if (res.code == 0) {
+                        //登入成功的提示与跳转
+                        layer.msg(res.msg, {
+                            offset: '15px'
+                            , icon: 1
+                            , time: 1000
+                        }, function () {
+                            location.href = 'index.html'; //后台主页
+                        });
+                    } else {
+                        //登入失败的提示与操作
+                        layer.msg(res.msg, {
+                            offset: '15px'
+                            , icon: 2
+                            , time: 1000
+                        }, function () {
+                            $("#verifyImg").click();
+                            $("#LAY-user-login-vercode").val('');
+                        });
+                    }
+                }
+            });
+        });
+
+        document.onkeydown = function (event) {
+            var e = event || window.event;
+            if (e && e.keyCode == 13) { //回车键的键值为13
+                //console.log(23);
+                $("#login").click(); //调用登录按钮的登录事件
+            }
+        };
+    });
+
+</script>
+</body>
+</html>

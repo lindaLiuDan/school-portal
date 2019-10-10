@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.product.dao.IProductCommentDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.moduless.ProductCommentEntity" id="productCommentMap">-->
+                    <!--<resultMessage property="commId" column="comm_id"/>-->
+                    <!--<resultMessage property="productId" column="product_id"/>-->
+                    <!--<resultMessage property="userId" column="user_id"/>-->
+                    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+                    <!--<resultMessage property="title" column="title"/>-->
+                    <!--<resultMessage property="content" column="content"/>-->
+                    <!--<resultMessage property="tagType" column="tag_type"/>-->
+                    <!--<resultMessage property="isShow" column="is_show"/>-->
+                    <!--<resultMessage property="levels" column="levels"/>-->
+                    <!--<resultMessage property="sort" column="sort"/>-->
+                    <!--<resultMessage property="isDel" column="is_del"/>-->
+            <!--</resultMap>-->
+
+
+</mapper>

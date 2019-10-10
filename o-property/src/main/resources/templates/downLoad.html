@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情</title>
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+          name="viewport">
+    <meta content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+          name="viewport">
+    <link href="../../statics/reset.css" rel="stylesheet">
+    <link href="../../statics/style/downLoad.css" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper" id="wrapper">
+    <img alt="下载金翁资本App" class="background-img" src="../../statics/asset/backgroundImg@1x.png">
+    <div class="content">
+        <div class="img-wrapper" style="background-image: url('${img}');background-size: 100% 100%;
+     background-repeat: no-repeat;">
+        </div>
+        <div class="text">${title}</div>
+        <div class="open">详情请打开金翁资本APP</div>
+        <input id="regCode" type="hidden" value="${regCode}">
+    </div>
+    <img alt="下载金翁资本App" class="button-img" id="wrappe" src="../../statics/asset/buttonImg@1x.png">
+</div>
+<script>
+    let btn = document.getElementById("wrappe");
+    let regCode = document.getElementById("regCode").value;
+    btn.onclick = function () {
+        if (!(regCode == "" || regCode == null || regCode == undefined)) {
+            window.location.href = "https://www.goldkeng.com/static/iosShare.html?regCode=" + regCode;
+        } else {
+            window.location.href = "https://www.goldkeng.com/static/iosShare.html";
+        }
+
+    }
+</script>
+</body>
+</html>

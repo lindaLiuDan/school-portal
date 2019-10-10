@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.user.dao.IUserAuthDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.moduless.UserAuthEntity" id="userAuthMap">-->
+    <!--<resultMessage property="authId" column="auth_id"/>-->
+    <!--<resultMessage property="userId" column="user_id"/>-->
+    <!--<resultMessage property="infoId" column="info_id"/>-->
+    <!--<resultMessage property="buildId" column="build_id"/>-->
+    <!--<resultMessage property="homeNo" column="home_no"/>-->
+    <!--<resultMessage property="identity" column="Identity"/>-->
+    <!--<resultMessage property="realName" column="real_name"/>-->
+    <!--<resultMessage property="idCard" column="id_card"/>-->
+    <!--<resultMessage property="aId" column="a_id"/>-->
+    <!--<resultMessage property="isAuth" column="is_auth"/>-->
+    <!--<resultMessage property="houseStructure" column="house_structure"/>-->
+    <!--<resultMessage property="qrCode" column="qr_code"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--<resultMessage property="editor" column="editor"/>-->
+    <!--<resultMessage property="isDel" column="is_del"/>-->
+    <!--</resultMap>-->
+
+
+</mapper>

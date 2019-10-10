@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.product.dao.IProductCateDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.moduless.ProductCateEntity" id="productCateMap">-->
+    <!--<resultMessage property="cateId" column="cate_id"/>-->
+    <!--<resultMessage property="cateName" column="cate_name"/>-->
+    <!--<resultMessage property="parentId" column="parent_id"/>-->
+    <!--<resultMessage property="img" column="img"/>-->
+    <!--<resultMessage property="smallImg" column="small_img"/>-->
+    <!--<resultMessage property="isHot" column="is_hot"/>-->
+    <!--<resultMessage property="creator" column="creator"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--<resultMessage property="editor" column="editor"/>-->
+    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--<resultMessage property="isDel" column="is_del"/>-->
+    <!--<resultMessage property="sort" column="sort"/>-->
+    <!--</resultMap>-->
+
+
+</mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.sys.dao.IDictInfoDao">
+
+    <resultMap id="BaseResultMap" type="com.info.modules.sys.entity.DictEntity">
+        <id column="id" property="dictId" jdbcType="INTEGER"/>
+        <result column="dict_name" property="dictName" jdbcType="VARCHAR"/>
+        <result column="dict_type" property="dictType" jdbcType="VARCHAR"/>
+        <result column="dict_code" property="dictCode" jdbcType="VARCHAR"/>
+        <result column="dict_value" property="dictValue" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+        <result column="order_num" property="orderNum" jdbcType="INTEGER"/>
+        <result column="is_del" property="is_del" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+      dict_id, dict_name, dict_type, dict_code, dict_value
+  </sql>
+    <select id="findDisByType" resultType="com.info.modules.sys.vo.DictVo" parameterType="string">
+        select
+        <include refid="Base_Column_List"/>
+        from sys_dict where type=#{key} order by order_num desc
+    </select>
+    <select id="findDisByTypeAndCode" resultType="java.lang.String" parameterType="map">
+        select sd.dict_value from  sys_dict sd where  sd.dict_type=#{key} and  sd.dict_code=#{code}
+    </select>
+</mapper>

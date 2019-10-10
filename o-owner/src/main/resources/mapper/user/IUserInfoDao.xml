@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.user.dao.IUserInfoDao">
+
+    <select id="findUserInfoById" parameterType="java.lang.Integer"
+            resultType="com.info.modules.user.form.UserBaseForm">
+        select ui.user_id,ui.user_name,ui.img,ua.is_auth
+        from user_info ui
+        left JOIN user_auth ua on ui.user_id=ua.user_id where ui.user_id=#{userId}
+    </select>
+
+    <select id="getCommunity" parameterType="java.lang.Integer"
+            resultType="com.info.modules.user.entity.UserInfoEntity">
+        select ui.user_id,ci.info_name,ci.info_id from user_info ui
+        left join user_auth ua on ui.user_id = ua.user_id
+        left join community_info ci on ua.info_id = ci.info_id
+        where ui.del=1 and  ua.identity = 1 and ci.is_del=1 and ua.is_auth=3 and ui.user_id= #{userId}
+    </select>
+
+
+</mapper>

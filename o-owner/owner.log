@@ -1,0 +1,58 @@
+2019-07-11 17:15:43.380  WARN 16228 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Administrator/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Administrator/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-07-11 17:15:43.466  INFO 16228 --- [main] com.info.JDKDateTest                     : Starting JDKDateTest on SC-201906031309 with PID 16228 (started by Administrator in E:\workSpace201907\o-lift\o-owner)
+2019-07-11 17:15:43.467 DEBUG 16228 --- [main] com.info.JDKDateTest                     : Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2019-07-11 17:15:43.468  INFO 16228 --- [main] com.info.JDKDateTest                     : The following profiles are active: dev
+2019-07-11 17:15:52.587  INFO 16228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-11 17:15:52.607  INFO 16228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-11 17:15:52.947  INFO 16228 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 290ms. Found 0 repository interfaces.
+2019-07-11 17:15:54.800  INFO 16228 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b067f9be] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-11 17:15:58.505  INFO 16228 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-07-11 17:16:00.404  INFO 16228 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-11 17:16:04.943  WARN 16228 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.info.modules.user.form.SendSMSForm.
+2019-07-11 17:16:10.633  INFO 16228 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-11 17:16:12.510  INFO 16228 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-11 17:16:13.272  INFO 16228 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-07-11 17:16:15.461  INFO 16228 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-11 17:16:15.551  INFO 16228 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-11 17:16:15.711  INFO 16228 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-11 17:16:16.270  INFO 16228 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: userInfoUsingGET_1
+2019-07-11 17:16:16.520  INFO 16228 --- [main] com.info.JDKDateTest                     : Started JDKDateTest in 35.548 seconds (JVM running for 41.131)
+2019-07-11 17:16:25.930  INFO 16228 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-11 17:16:26.060  INFO 16228 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-07-11 17:16:57.177  WARN 5012 --- [main] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/C:/Users/Administrator/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/C:/Users/Administrator/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-07-11 17:16:57.311  INFO 5012 --- [main] com.info.JDKDateTest                     : Starting JDKDateTest on SC-201906031309 with PID 5012 (started by Administrator in E:\workSpace201907\o-lift\o-owner)
+2019-07-11 17:16:57.312 DEBUG 5012 --- [main] com.info.JDKDateTest                     : Running with Spring Boot v2.1.5.RELEASE, Spring v5.1.7.RELEASE
+2019-07-11 17:16:57.312  INFO 5012 --- [main] com.info.JDKDateTest                     : The following profiles are active: dev
+2019-07-11 17:17:05.185  INFO 5012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-07-11 17:17:05.195  INFO 5012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-11 17:17:05.538  INFO 5012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 280ms. Found 0 repository interfaces.
+2019-07-11 17:17:07.673  INFO 5012 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6c15afe1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-11 17:17:12.672  INFO 5012 --- [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-07-11 17:17:14.027  INFO 5012 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-07-11 17:17:18.387  WARN 5012 --- [main] c.b.m.core.toolkit.TableInfoHelper       : Warn: Could not find @TableId in Class: com.info.modules.user.form.SendSMSForm.
+2019-07-11 17:17:23.823  INFO 5012 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-11 17:17:25.518  INFO 5012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-11 17:17:26.128  INFO 5012 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-07-11 17:17:28.197  INFO 5012 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-07-11 17:17:28.277  INFO 5012 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-07-11 17:17:28.427  INFO 5012 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-07-11 17:17:28.957  INFO 5012 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: userInfoUsingGET_1
+2019-07-11 17:17:29.197  INFO 5012 --- [main] com.info.JDKDateTest                     : Started JDKDateTest in 33.954 seconds (JVM running for 38.592)
+2019-07-11 17:17:43.957  INFO 5012 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-11 17:17:43.997  INFO 5012 --- [Thread-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+          name="viewport">
+    <title>帮助中心</title>
+    <link href="/statics/reset.css" rel="stylesheet">
+    <link href="/statics/style/helpcenter.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
+    <link href="https://unpkg.com/element-ui@2.7.2/lib/theme-chalk/index.css" rel="stylesheet">
+    <script src="https://unpkg.com/element-ui@2.7.2/lib/index.js"></script>
+</head>
+<body>
+<div id="app">
+    <div class="about-body">
+        <div class="text-container">
+            <div class="text-wrapper">
+                <div class="question">热门问题</div>
+                <el-collapse accordion v-model="activeName">
+                    <el-collapse-item name="1" title="为什么我不能发布项目？">
+                        <div>只有开通会员和实名认证后才可以发布项目.</div>
+                    </el-collapse-item>
+                    <el-collapse-item name="2" title="发布项目后，为什么在首页中找不到项目？">
+                        <div>发布项目后，需要我们审核人员进行审核，审核通过后方可在首页中展示。</div>
+                    </el-collapse-item>
+                    <el-collapse-item name="3" title="为什么我不能把自己的名片投递给对方呢？">
+                        <div>投递名片之前，需要在“个人中心”中先完善自己的名片，完善之后方可投递名片。</div>
+                    </el-collapse-item>
+                    <el-collapse-item name="4" title="为什么我的个人中心内容和其他的不一样？">
+                        <div>
+                            我们app中分为5中不同身份的人，分别为：普通用户，投资总监，投资经理，投资顾问，渠道管理员。每种不同身份的人多看到的界面不同。如果您想成为代理商等身份，可以通过个人中心的“申请代理”把信息提交给我们，我们工作人员将与你联系。
+                        </div>
+                    </el-collapse-item>
+                    <el-collapse-item name="5" title="为什么我不能提现？">
+                        <div>提现之前，需要进行实名认证，认证通过后方可提现。</div>
+                    </el-collapse-item>
+                    <el-collapse-item name="6" title="还有哪些渠道可以下载到金翁资本app？">
+                        <div>(1)您可以在各大应用市场中搜索“金翁资本”进行下载。</div>
+                        <div>(2)你可以通过身边的朋友分享的金翁资本的链接进行下载。</div>
+                        <div>(3)还可以在百度搜索“金翁资本”(或输入www.goldkeng.com)到我们官网下载。</div>
+                    </el-collapse-item>
+                    <el-collapse-item name="7" title="金翁资本是一个什么样的平台？">
+                        <div>
+                            金翁资本是给生意人和创业人士提供资金信息和项目信息的一个平台。对于一个生意人来说，一条有价值的信息至关重要，想必您也深有体会。（介绍人需要拿自己的手机演示：打开APP让用户自己看）
+                        </div>
+                        <div class="img-wrapper"><img alt="" class="img" src="/statics/asset/help/img7.jpg"></div>
+                    </el-collapse-item>
+                    <el-collapse-item name="8" title="假问题">
+                        <div>平台上发的每一条信息都有身份证信息备案，不经过实名认证的人，根本无法使用该平台。</div>
+                        <div class="img-wrapper"><img alt="" class="img" src="/statics/asset/help/img8.jpg"></div>
+                    </el-collapse-item>
+                    <el-collapse-item name="9" title="在金翁资本真的可以获得到融资吗？">
+                        <div>由您发布的项目潜力和价值所决定的，平台上的投资人很多，您可以找与您项目相互匹配的投资人，获取投资人的联系方式或者投递您的名片，多一个投资人，多一份机会。</div>
+                        <div class="img-wrapper"><img alt="" class="img" src="/statics/asset/help/img9.jpg"></div>
+                    </el-collapse-item>
+                    <el-collapse-item name="10" title="在金翁资本可以找的什么样的项目？">
+                        <div>可以根据您的需求，按照行业、地区、方式、金额进行寻找与您匹配的资金信息或项目信息，另有资产交易：股权交易和债权交易，固定资产和无形资产。</div>
+                    </el-collapse-item>
+                    <el-collapse-item name="11" title="找到合适的项目或者资金人，如何联系他呢？">
+                        <div>您可以在项目介绍下面看到获取对方联系方式的按钮，进行获取项目方或资金方的联系方式。(在此提醒：投资有风险，交易需谨慎)</div>
+                        <div class="img-wrapper"><img alt="" class="img" src="/statics/asset/help/img11.jpg"></div>
+                    </el-collapse-item>
+                    <el-collapse-item name="12" title="金翁资本平台收费问题？">
+                        <div>不开通会员是无法使用该平台的，会员年费是6888元，如果您现在注册，我可以给您一个优惠码，优惠6200元。只需要支付688元就可以了。</div>
+                        <div class="img-wrapper"><img alt="" class="img" src="/statics/asset/help/img12.jpg"></div>
+                    </el-collapse-item>
+                    <el-collapse-item name="13" title="为什么用你的优惠码可以优惠？">
+                        <div>因为我获得了推荐资格，并且向平台申请了优惠码，如果您朋友也要用的话，您还可以使用我的优惠码帮助他注册。(注：用户推荐用户没有提成)</div>
+                        <div class="img-wrapper"><img alt="" class="img" src="/statics/asset/help/img13.jpg"></div>
+                    </el-collapse-item>
+                    <el-collapse-item name="14" title="金翁资本的优势在哪里？">
+                        <div>金翁资本是全国性商脉圈，汇聚了各行各业的生意人，资源量大，有投资需求和融资需求的人较多。</div>
+                        <div class="img-wrapper"><img alt="" class="img" src="/statics/asset/help/img14.jpg"></div>
+                        <div>如果以上没有解决问题，请在“联系我们”中需求帮助。</div>
+                    </el-collapse-item>
+                </el-collapse>
+                <div class="footer"></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data() {
+            return {
+                activeName: ""
+            }
+        }
+    })
+</script>
+</body>
+</html>

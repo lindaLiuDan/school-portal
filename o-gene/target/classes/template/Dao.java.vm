@@ -1,0 +1,11 @@
+package ${package}.${moduleName}.dao;
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface I${className}Dao extends BaseMapper<${className}Entity> {
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.community.dao.ICommunityInfoDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.modules.community.modules.CommunityInfoEntity" id="communityInfoMap">-->
+    <!--<resultMessage property="infoId" column="info_id"/>-->
+    <!--<resultMessage property="infoNo" column="info_no"/>-->
+    <!--<resultMessage property="infoName" column="info_name"/>-->
+    <!--<resultMessage property="introduction" column="introduction"/>-->
+    <!--<resultMessage property="mobile" column="mobile"/>-->
+    <!--<resultMessage property="aId" column="a_id"/>-->
+    <!--<resultMessage property="dimension" column="dimension"/>-->
+    <!--<resultMessage property="longitude" column="longitude"/>-->
+    <!--<resultMessage property="memo" column="memo"/>-->
+    <!--<resultMessage property="creator" column="creator"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--<resultMessage property="editor" column="editor"/>-->
+    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--<resultMessage property="sort" column="sort"/>-->
+    <!--</resultMap>-->
+
+
+</mapper>

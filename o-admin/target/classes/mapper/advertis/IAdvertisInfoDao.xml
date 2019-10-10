@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.advertis.dao.IAdvertisInfoDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.modules.advertis.modules.AdvertisInfoEntity" id="advertisInfoMap">-->
+    <!--<resultMessage property="advertisId" column="advertis_id"/>-->
+    <!--<resultMessage property="adId" column="ad_id"/>-->
+    <!--<resultMessage property="infoId" column="info_id"/>-->
+    <!--<resultMessage property="infoNo" column="info_no"/>-->
+    <!--<resultMessage property="link" column="link"/>-->
+    <!--<resultMessage property="infoName" column="info_name"/>-->
+    <!--<resultMessage property="img" column="img"/>-->
+    <!--<resultMessage property="smallImg" column="small_img"/>-->
+    <!--<resultMessage property="width" column="width"/>-->
+    <!--<resultMessage property="height" column="height"/>-->
+    <!--<resultMessage property="statues" column="statues"/>-->
+    <!--<resultMessage property="startTime" column="start_time"/>-->
+    <!--<resultMessage property="endTime" column="end_time"/>-->
+    <!--<resultMessage property="isType" column="is_type"/>-->
+    <!--<resultMessage property="isDel" column="is_del"/>-->
+    <!--<resultMessage property="sort" column="sort"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--<resultMessage property="creator" column="creator"/>-->
+    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--<resultMessage property="editor" column="editor"/>-->
+    <!--</resultMap>-->
+
+
+</mapper>

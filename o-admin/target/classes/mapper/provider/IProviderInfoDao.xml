@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.provider.dao.IProviderInfoDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.moduless.ProviderInfoEntity" id="providerInfoMap">-->
+                    <!--<resultMessage property="providerId" column="provider_id"/>-->
+                    <!--<resultMessage property="community" column="community"/>-->
+                    <!--<resultMessage property="gradeId" column="grade_id"/>-->
+                    <!--<resultMessage property="typeId" column="type_id"/>-->
+                    <!--<resultMessage property="providerName" column="provider_name"/>-->
+                    <!--<resultMessage property="providerNo" column="provider_no"/>-->
+                    <!--<resultMessage property="providerImg" column="provider_img"/>-->
+                    <!--<resultMessage property="providerSmallImg" column="provider_small_img"/>-->
+                    <!--<resultMessage property="manageExtent" column="manage_extent"/>-->
+                    <!--<resultMessage property="manageBrand" column="manage_brand"/>-->
+                    <!--<resultMessage property="manageCate" column="manage_cate"/>-->
+                    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+                    <!--<resultMessage property="creator" column="creator"/>-->
+                    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+                    <!--<resultMessage property="editor" column="editor"/>-->
+                    <!--<resultMessage property="isDel" column="is_del"/>-->
+                    <!--<resultMessage property="sort" column="sort"/>-->
+            <!--</resultMap>-->
+
+
+</mapper>

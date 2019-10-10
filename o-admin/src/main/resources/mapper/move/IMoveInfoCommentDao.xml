@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.move.dao.IMoveInfoCommentDao">
+
+    <select id="getPageList" parameterType="java.util.Map"
+            resultType="com.info.modules.move.entity.MoveInfoCommentEntity">
+        select
+        mc.`comment`,mc.creator_time,mc.user_id,ui.user_name,ui.img
+        from move_info_comment mc
+        LEFT JOIN user_info ui ON mc.user_id = ui.user_id
+        where mc.move_id = #{moveId}
+        ORDER BY mc.creator_time DESC
+        <if test=" offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="getPageTotal" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select COUNT(1)
+        from move_info_comment  mc
+        LEFT JOIN user_info ui ON mc.user_id = ui.user_id where mc.move_id = #{moveId}
+    </select>
+</mapper>

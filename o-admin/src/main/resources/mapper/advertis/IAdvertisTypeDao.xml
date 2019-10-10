@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.advertis.dao.IAdvertisTypeDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.modules.community.modules.AdvertisTypeEntity" id="advertisTypeMap">-->
+        <!--<resultMessage property="adId" column="ad_id"/>-->
+        <!--<resultMessage property="adName" column="ad_name"/>-->
+        <!--<resultMessage property="memo" column="memo"/>-->
+        <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+        <!--<resultMessage property="creator" column="creator"/>-->
+        <!--<resultMessage property="editor" column="editor"/>-->
+        <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--</resultMap>-->
+
+
+</mapper>

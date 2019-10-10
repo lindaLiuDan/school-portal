@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.friend.dao.IFriendRingDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.sys.modules.FriendRingEntity" id="friendRingMap">-->
+    <!--<resultMessage property="ringId" column="ring_id"/>-->
+    <!--<resultMessage property="infoId" column="info_id"/>-->
+    <!--<resultMessage property="userId" column="user_id"/>-->
+    <!--<resultMessage property="content" column="content"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--<resultMessage property="likeNum" column="like_num"/>-->
+    <!--<resultMessage property="commentNum" column="comment_num"/>-->
+    <!--<resultMessage property="editor" column="editor"/>-->
+    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--<resultMessage property="isDel" column="is_del"/>-->
+    <!--<resultMessage property="sort" column="sort"/>-->
+    <!--</resultMap>-->
+
+    <select id="getPageList" parameterType="java.util.Map" resultType="com.info.modules.friend.entity.FriendRingEntity">
+        SELECT fr.ring_id,fr.content,fr.info_id,fr.user_id,fr.like_num,fr.creator_time,ui.user_name,ui.img
+        from friend_ring fr LEFT JOIN user_info ui on fr.user_id = ui.user_id where fr.info_id=#{infoId}
+        <if test=" offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="getPageTotal" resultType="java.lang.Integer">
+      SELECT COUNT(1) from (SELECT fr.content from friend_ring fr LEFT JOIN user_info ui on fr.user_id = ui.user_id where fr.info_id=#{infoId}) as a
+    </select>
+
+
+    <select id="getDeatil" parameterType="java.lang.Integer"
+            resultType="com.info.modules.friend.entity.FriendRingEntity">
+        SELECT fr.ring_id,fr.content,fr.info_id,fr.user_id,fr.like_num,fr.creator_time,ui.user_name,ui.img
+        from friend_ring fr LEFT JOIN user_info ui on fr.user_id = ui.user_id where fr.ring_id=#{ringId}
+    </select>
+
+    <update id="updateAddLikeNum" parameterType="java.lang.Integer">
+        update friend_ring set like_num = like_num + 1 where ring_id=#{ringId}
+    </update>
+
+
+    <update id="updateReduceLikeNum" parameterType="java.lang.Integer">
+        update friend_ring set like_num = like_num - 1 where ring_id=#{ringId}
+    </update>
+
+</mapper>

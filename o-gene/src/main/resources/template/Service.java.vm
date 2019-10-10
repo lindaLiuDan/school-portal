@@ -1,0 +1,31 @@
+package ${package};
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import java.util.Map;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface I${className}Service extends IService<${className}Entity> {
+
+    /**
+     * @Author: ${author}  ${email}
+     * @Description: ${comments}
+     * @Date: ${datetime}
+     */
+    /**
+     * 功能描述: ${comments}
+     *
+     * @Params:  * @param null
+     * @Author:  ${author}
+     * @Date: ${datetime}
+     * @Return:
+     */
+    PageUtils queryPage(Map<String, Object> params);
+
+}
+

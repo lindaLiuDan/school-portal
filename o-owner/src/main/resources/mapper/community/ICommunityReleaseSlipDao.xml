@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.community.dao.ICommunityReleaseSlipDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.modules.community.modules.CommunityInfoEntity" id="communityInfoMap">-->
+    <!--<resultMessage property="infoId" column="info_id"/>-->
+    <!--<resultMessage property="infoNo" column="info_no"/>-->
+    <!--<resultMessage property="infoName" column="info_name"/>-->
+    <!--<resultMessage property="introduction" column="introduction"/>-->
+    <!--<resultMessage property="mobile" column="mobile"/>-->
+    <!--<resultMessage property="aId" column="a_id"/>-->
+    <!--<resultMessage property="dimension" column="dimension"/>-->
+    <!--<resultMessage property="longitude" column="longitude"/>-->
+    <!--<resultMessage property="memo" column="memo"/>-->
+    <!--<resultMessage property="creator" column="creator"/>-->
+    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+    <!--<resultMessage property="editor" column="editor"/>-->
+    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+    <!--<resultMessage property="sort" column="sort"/>-->
+    <!--</resultMap>-->
+
+    <select id="getPassAndApplyList" parameterType="java.util.Map"
+            resultType="com.info.modules.community.vo.CommunityReleasePassAndApplyVo">
+        select rs.slip_id,rs.start_time,rs.slip_code,rs.open_time,rs.slip_cause
+        from community_release_slip rs where rs.user_id=#{userId}
+        <if test="checkResult!=null and checkResult!= ''">
+            AND rs.`check_result` = #{checkResult}
+        </if>
+        ORDER BY rs.creator_time DESC
+        <if test=" offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="getPassAndApplyListTotal" parameterType="java.util.Map" resultType="java.lang.Integer">
+        select COUNT(1)
+        from community_release_slip rs where rs.user_id=1 and rs.check_result =#{userId}
+        <if test="checkResult!=null and checkResult!= ''">
+            AND rs.`check_result` = #{checkResult}
+        </if>
+    </select>
+</mapper>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="o-gene:war">
+    <output-path>$PROJECT_DIR$/o-gene/target</output-path>
+    <root id="archive" name="o-gene-2.0.5.RELEASE.war">
+      <element id="artifact" artifact-name="o-gene:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.feedback.dao.IAppFeedbackDao">
+
+    <select id="findPageList" parameterType="java.util.Map" resultType="com.info.modules.feedback.entity.AppFeedbackEntity">
+        SELECT
+          f.`feedblack_id`,
+          f.`user_id`,
+          f.`content`,
+          f.`create_time`,
+          f.`is_process`,
+          f.`process_time`,
+          f.`process_man`,
+          f.`img`,
+          f.`mobail`,
+          ui.`user_name` as username ,
+          sy.`username` as processName
+        FROM
+          app_feedback f
+          LEFT JOIN user_info ui
+            ON f.`user_id` = ui.`user_id`
+          LEFT JOIN sys_user sy
+            ON sy.`user_id` = f.`process_man`
+        <if test="userName!=null and  userName != '' ">
+            AND ui.user_name LIKE concat('%', #{userName}, '%')
+        </if>
+        <if test="startDate!=null and startDate != '' ">
+            AND f.create_time &gt;= #{startDate}
+        </if>
+        <if test="endDate!=null and endDate != '' ">
+            AND f.create_time &lt;= #{endDate}
+        </if>
+        order by f.create_time desc
+        <if test=" offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="findPageTotal" parameterType="java.util.Map" resultType="java.lang.Integer">
+        SELECT  COUNT(1) FROM(
+        SELECT
+        f.`feedblack_id`
+        FROM
+        app_feedback f
+        LEFT JOIN user_info ui
+        ON f.`user_id` = ui.`user_id`
+        LEFT JOIN sys_user sy
+        ON sy.`user_id` = f.`process_man`
+        <if test="userName!=null and  userName != '' ">
+            AND ui.user_name LIKE concat('%', #{userName}, '%')
+        </if>
+        <if test="startDate!=null and startDate != '' ">
+            AND f.create_time &gt;= #{startDate}
+        </if>
+        <if test="endDate!=null and endDate != '' ">
+            AND f.create_time &lt;= #{endDate}
+        </if>
+        )as a
+
+    </select>
+
+
+    <select id="getById" resultType="com.info.modules.feedback.entity.AppFeedbackEntity" parameterType="java.lang.Integer">
+        SELECT
+          f.`feedblack_id`,
+          f.`user_id`,
+          f.`content`,
+          f.`create_time`,
+          f.`is_process`,
+          f.`process_time`,
+          f.`process_man`,
+          f.`img`,
+          f.`mobail`,
+          ui.`user_name` as username ,
+          sy.`username` as processName
+        FROM
+          app_feedback f
+          LEFT JOIN user_info ui
+            ON f.`user_id` = ui.`user_id`
+          LEFT JOIN sys_user sy
+            ON sy.`user_id` = f.`process_man`
+            where f.feedblack_id = #{feedblackId}
+    </select>
+</mapper>

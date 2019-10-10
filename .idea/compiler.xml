@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="o-admin" />
+        <module name="o-entity" />
+        <module name="o-gene" />
+        <module name="o-owner" />
+        <module name="o-property" />
+        <module name="o-public" />
+        <module name="o-tools" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="o-admin" target="1.8" />
+      <module name="o-api" target="1.8" />
+      <module name="o-entity" target="1.8" />
+      <module name="o-gene" target="1.8" />
+      <module name="o-lift" target="1.8" />
+      <module name="o-owner" target="1.8" />
+      <module name="o-property" target="1.8" />
+      <module name="o-provid" target="1.8" />
+      <module name="o-public" target="1.8" />
+      <module name="o-tools" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

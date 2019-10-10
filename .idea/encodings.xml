@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-entity" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-gene" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-owner" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-property" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-provid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-public" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/o-tools" charset="UTF-8" />
+  </component>
+</project>

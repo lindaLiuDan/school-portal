@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.friend.dao.IFriendRingCommentDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.info.modules.friend.entity.FriendRingCommentEntity" id="friendRingCommentMap">
+        <result property="commentId" column="comment_id"/>
+        <result property="ringId" column="ring_id"/>
+        <result property="content" column="content"/>
+        <result property="userId" column="user_id"/>
+        <result property="creatorTime" column="creator_time"/>
+        <result property="parentId" column="parent_id"/>
+        <collection property="newsList" ofType="com.info.modules.friend.vo.FriendRingCommentVo"
+                    select="getChildren" column="comment_id"></collection>
+    </resultMap>
+
+    <select id="findAllCommentByPId" parameterType="java.lang.Integer" resultMap="friendRingCommentMap">
+        SELECT frl.user_id,frl.comment_id,frl.content,ui.user_name,ui.img,frl.creator_time,frl.ring_id,frl.parent_id
+        from friend_ring_comment frl
+        left join user_info ui on frl.user_id=ui.user_id
+        LEFT JOIN friend_ring fr on fr.ring_id = frl.ring_id
+        WHERE frl.ring_id=#{ringId} AND frl.parent_id=0
+        ORDER BY frl.`creator_time` DESC
+        <if test=" offset != null and limit != null">
+            limit #{offset}, #{limit}
+        </if>
+    </select>
+
+    <select id="getChildren" resultType="com.info.modules.friend.vo.FriendRingCommentVo">
+        SELECT frl.user_id,frl.comment_id,frl.content,ui.user_name,ui.img,frl.creator_time,frl.ring_id,frl.parent_id
+        from friend_ring_comment frl
+        left join user_info ui on frl.user_id=ui.user_id
+        LEFT JOIN friend_ring fr on fr.ring_id = frl.ring_id
+        WHERE frl.parent_id=#{commentId}
+        ORDER BY frl.`creator_time` DESC
+        LIMIT 0, 2
+    </select>
+
+    <select id="findAllTotal" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        SELECT
+        count( 1 )
+        FROM
+        (
+        SELECT
+            frl.user_id
+        FROM
+            friend_ring_comment frl
+            LEFT JOIN user_info ui ON frl.user_id = ui.user_id
+            LEFT JOIN friend_ring fr ON fr.ring_id = frl.ring_id
+        WHERE
+            frl.ring_id = 1
+        AND frl.parent_id = 0
+        ) AS a
+    </select>
+
+
+</mapper>

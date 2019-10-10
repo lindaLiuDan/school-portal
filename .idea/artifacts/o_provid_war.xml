@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="o-provid:war">
+    <output-path>$PROJECT_DIR$/o-provid/target</output-path>
+    <root id="archive" name="o-provid-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="o-provid:war exploded" />
+    </root>
+  </artifact>
+</component>

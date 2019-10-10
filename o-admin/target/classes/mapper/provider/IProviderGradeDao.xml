@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.info.modules.provider.dao.IProviderGradeDao">
+
+    <!-- 可根据自己的需求，是否要使用 -->
+    <!--<resultMap type="com.info.moduless.ProviderGradeEntity" id="providerGradeMap">-->
+                    <!--<resultMessage property="gradeId" column="grade_id"/>-->
+                    <!--<resultMessage property="gname" column="gname"/>-->
+                    <!--<resultMessage property="memo" column="memo"/>-->
+                    <!--<resultMessage property="privilege" column="privilege"/>-->
+                    <!--<resultMessage property="creatorTime" column="creator_time"/>-->
+                    <!--<resultMessage property="creator" column="creator"/>-->
+                    <!--<resultMessage property="editorTime" column="editor_time"/>-->
+                    <!--<resultMessage property="editor" column="editor"/>-->
+                    <!--<resultMessage property="sort" column="sort"/>-->
+            <!--</resultMap>-->
+
+
+</mapper>
